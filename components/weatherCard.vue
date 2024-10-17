@@ -9,7 +9,7 @@
       <div class="relative">
         <h1 class="text-9xl ">{{ Math.round(city.main.temp - 273.15) }}</h1>
         <p class="text-xl top-1 -right-2 absolute">°C</p>
-        <h1 class="absolute -bottom-2 left-1">{{ city.name }}</h1>
+        <h1 class="absolute -bottom-2 left-5">{{ city.name }}</h1>
       </div>
       <h1 class="absolute text-lg bottom-3 right-10">{{ getDay() }}</h1>
       
@@ -64,7 +64,7 @@ const getDay = () => {
 <style scoped>
 .weatherContainer {
   width: 250px;
-  height: 200px;
+  height: 220px;
   background-color: var(--card-color);
   border-radius: 12px;
   padding: 5px;
@@ -79,8 +79,8 @@ const getDay = () => {
 .weatherContainer img {
   position: absolute;
   bottom: -40px;
-  left: -80px;
-  width: 190px;
+  left: -65px;
+  width: 170px;
 }
 
 
@@ -120,7 +120,7 @@ const getDay = () => {
 /*------------ شاشة 1366 ------------*/
 @media (max-width: 1366px) {
   .weatherContainer {
-    width: 250px;
+    width: 260px;
   }
 
   .title {
@@ -134,7 +134,7 @@ const getDay = () => {
 /*------------ شاشة 1347 ------------*/
 @media (max-width: 1347px) {
   .weatherContainer {
-    width: 250px;
+    width: 230px;
   }
 
   .title {
@@ -148,7 +148,7 @@ const getDay = () => {
 /*--------------- شاشة 1024 ---------------*/
 @media (max-width: 1024px) {
   .weatherContainer {
-    width: 320px;
+    width: 250px;
   }
 
   .title {
@@ -162,7 +162,7 @@ const getDay = () => {
 /*--------------- شاشة 955 ---------------*/
 @media (max-width: 955px) {
   .weatherContainer {
-    width: 530px;
+    width: 230px;
   }
   .title {
     font-size: 60px;
@@ -172,10 +172,10 @@ const getDay = () => {
   }
 }
 
-/*--------------- شاشة 640 ---------------*/
-@media (max-width: 640px) {
+/*--------------- شاشة 600 ---------------*/
+@media (max-width: 600px) {
   .weatherContainer {
-    width: 400px;
+    width: 230px;
   }
 
   .title {
@@ -184,10 +184,57 @@ const getDay = () => {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .weatherContainer img {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 140px;
+}
+}
+/*--------------- شاشة 560 ---------------*/
+@media (max-width: 560px) {
+  .weatherContainer {
+    width: 240px;
+  }
+
+  .title {
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .weatherContainer img {
+  position: absolute;
+  bottom: -30px;
+  left: -25px;
+  width: 120px;
+}
 }
 
+/*--------------- شاشة 538 ---------------*/
+@media (max-width: 538px) {
+  .weatherContainer {
+    width: 280px;
+  }
+
+  .title {
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .weatherContainer img {
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 180px;
+}
+}
 /*--------------- شاشة 400 ---------------*/
 @media (max-width: 400px) {
+  .weatherContainer {
+    width: 280px;
+  }
   .title {
     font-size: 35px;
     white-space: nowrap;
