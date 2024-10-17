@@ -10,8 +10,8 @@
         <ul>
           <li><NuxtLink to="/">الرئيسية</NuxtLink></li>
           <li><NuxtLink to="/about">نبذة عنا</NuxtLink></li>
-          <li><NuxtLink to="/services">الخدمات</NuxtLink></li>
-          <li><NuxtLink to="/contact">تواصل معنا</NuxtLink></li>
+          <li><NuxtLink to="/">الخدمات</NuxtLink></li>
+          <li><NuxtLink to="/">تواصل معنا</NuxtLink></li>
         </ul>
       </nav>
 
@@ -19,9 +19,9 @@
       <button class="menu-btn" @click.stop="toggleSidebar">☰</button>
 
       <!-- القائمة الجانبية للشاشات الصغيرة -->
-      <aside 
+      <aside
         ref="sidebar"
-        class="sidebar" 
+        class="sidebar"
         :class="{ open: isSidebarOpen }"
         @touchstart="startTouch"
         @touchend="endTouch"
@@ -29,9 +29,11 @@
         <button class="close-btn" @click="toggleSidebar">X</button>
         <ul>
           <li><NuxtLink to="/" @click="toggleSidebar">الرئيسية</NuxtLink></li>
-          <li><NuxtLink to="/about" @click="toggleSidebar">نبذة عنا</NuxtLink></li>
-          <li><NuxtLink to="/services" @click="toggleSidebar">الخدمات</NuxtLink></li>
-          <li><NuxtLink to="/contact" @click="toggleSidebar">تواصل معنا</NuxtLink></li>
+          <li>
+            <NuxtLink to="/about" @click="toggleSidebar">نبذة عنا</NuxtLink>
+          </li>
+          <li><NuxtLink to="/" @click="toggleSidebar">الخدمات</NuxtLink></li>
+          <li><NuxtLink to="/" @click="toggleSidebar">تواصل معنا</NuxtLink></li>
         </ul>
       </aside>
     </header>
@@ -39,7 +41,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from "vue";
 
 const isSidebarOpen = ref(false); // حالة فتح/إغلاق السايدبار
 let touchStartX = 0; // نقطة البداية للسحب
@@ -68,18 +70,19 @@ const endTouch = (event) => {
   const touchEndX = event.changedTouches[0].clientX; // حفظ مكان اللمس عند النهاية
 
   // إذا كان السحب لليمين (الفرق بين بداية ونهاية السحب موجب)
-  if (touchEndX - touchStartX > 50) { // أكثر من 50px لضمان إنه سحب
+  if (touchEndX - touchStartX > 50) {
+    // أكثر من 50px لضمان إنه سحب
     isSidebarOpen.value = false;
   }
 };
 
 // رصد الكليك في أي مكان في الصفحة
 onMounted(() => {
-  document.addEventListener('click', closeSidebar);
+  document.addEventListener("click", closeSidebar);
 });
 
 onUnmounted(() => {
-  document.removeEventListener('click', closeSidebar);
+  document.removeEventListener("click", closeSidebar);
 });
 </script>
 
@@ -176,6 +179,7 @@ onUnmounted(() => {
   width: 40px;
   height: 40px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* للشاشات الصغيرة فقط */
