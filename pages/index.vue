@@ -23,10 +23,15 @@
   <div class="weatherCardContainer">
     <WeatherCard />
   </div>
+  <div class=" text-center text-3xl my-8 ">اعرف مرتبك </div>
+  <div>
+    <IncomeCalculation />
+  </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
+
 
 const items = ref([]);
 const loading = ref(true); // متغير حالة التحميل

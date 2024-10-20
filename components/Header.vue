@@ -2,7 +2,7 @@
   <div class="headerContainer">
     <header class="header">
       <div class="logo">
-        <img src="assets/images/logo.png" width="150px" alt="Logo" />
+        <img src="assets/images/logo.png" width="120px" alt="Logo" />
       </div>
 
       <!-- القائمة العادية للشاشات الكبيرة -->
@@ -92,6 +92,8 @@ onUnmounted(() => {
   color: white;
   padding: 10px 0px;
   width: 100%;
+  height: 80px;
+  display: flex;
 }
 
 .header {
