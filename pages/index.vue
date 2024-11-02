@@ -38,7 +38,7 @@ const loading = ref(true); // متغير حالة التحميل
 
 onMounted(async () => {
   try {
-    const response = await fetch("https://dummyjson.com/c/b04a-aa3b-43ed-87df");
+    const response = await fetch("https://dummyjson.com/c/2aed-63cd-45e7-a95e");
     const data = await response.json();
 
     // وضع البيانات المستلمة في المتغير
