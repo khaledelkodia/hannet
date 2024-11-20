@@ -23,7 +23,7 @@
   <div class="weatherCardContainer">
     <WeatherCard />
   </div>
-  <div class=" text-center text-3xl my-8 ">اعرف مرتبك </div>
+  <div class=" text-center text-3xl my-8 ">إعرف مرتبك </div>
   <div>
     <IncomeCalculation />
   </div>
